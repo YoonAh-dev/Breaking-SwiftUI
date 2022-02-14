@@ -10,12 +10,14 @@ import SwiftUI
 // Custom TextView
 struct ContentView: View {
     var body: some View {
-        LandmarkDetail(landmark: landmarks[0])
+        LandmarkList()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        // environmentObject is empty -> preview fail
         ContentView()
+            .environmentObject(ModelData())
     }
 }
