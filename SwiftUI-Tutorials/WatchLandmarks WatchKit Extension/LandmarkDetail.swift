@@ -1,5 +1,5 @@
 //
-//  WatchLandmarkDetail.swift
+//  LandmarkDetail.swift
 //  WatchLandmarks WatchKit Extension
 //
 //  Created by SHIN YOON AH on 2022/02/15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WatchLandmarkDetail: View {
+struct LandmarkDetail: View {
     @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
     
@@ -50,11 +50,11 @@ struct WatchLandmarkDetail: View {
     }
 }
 
-struct WatchLandmarkDetail_Previews: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         let modelData = ModelData()
         return Group {
-            WatchLandmarkDetail(landmark: modelData.landmarks[0])
+            LandmarkDetail(landmark: modelData.landmarks[0])
                 .environmentObject(modelData)
         }
     }
